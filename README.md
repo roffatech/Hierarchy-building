@@ -16,7 +16,7 @@ Create a CSV of random project IDs based on a four-letter abbreviation for the d
 The next six characters should be a date in yyyymm format, followed by a dash, then followed by a three-digit sequence with leading zeros. The sequence should impose uniqueness on the numbering. If there was already a DLVY202401-001 
 indicating it is the first delivery project for January 2024, then the next delivery project would be DLVY2024001-002. 
 
-The project description should be a subject approriate to the department. You would not have 'DOT compliance training' for an accountant. 
+The project description should be a subject appropriate to the department. You would not have 'DOT compliance training' for an accountant for example. 
 
 Project start dates are in yyyymmdd format and can be random dates in 2024 to 2025. The project end date must be after the project start date and is in the same yyyymmdd format. If a project has an end date, its project active flag is 0, otherwise it is 1. 
 
