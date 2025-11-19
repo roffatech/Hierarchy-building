@@ -5,11 +5,12 @@ Code to build hierearchies and lineages when given rows of data with a child and
 I will run you through the steps I took to import the data and build the hierarchy table. You are free to customize this to your situation as needed. 
 
 (1) Creating Sample Data - I used AI to create legacy-project-table.xlsx from scratch. I do not have a copy of the original prompt, but I believe I did it in Claude.ai. 
+------------------------------
 
 The following paraphrases what I asked the AI to do for creating the data for legacy-project-table.xlsx and is my best recollection of what I did. If you used this prompt verbatim, it might not get you the same data that is in the file, but should get you close to where you could tweak it to get what you wanted. 
 
-The prompt
-----------
+The prompt:
+
 Create a CSV of random project IDs based on a four-letter abbreviation for the departments: 'DLVY' for delivery; 'SHIP' for shipping; 'RCVG' for receiving; 'ACCT' for accounting; 'HRPR' for HR/Payroll; 'SALE' for Sales; and 'TECH' for IT.
 
 The next six characters should be a date in yyyymm format, followed by a dash, then followed by a three-digit sequence with leading zeros. The sequence should impose uniqueness on the numbering. If there was already a DLVY202401-001 
@@ -23,6 +24,4 @@ If a project is no longer active, a project end reason must be provided: 'execut
 
 Projects are structured in a hierarchy with parents and children. The child of a project can never begin before its parent begins. The ancestry of a project could span multiple generations. A parent project could have grandchildren and great-grandchildren. 
 
-<end of prompt>
-
-I'll be sure to save my prompts in the future LOL. 
+Prompt ends here. I'll be sure to save my prompts in the future LOL. 
