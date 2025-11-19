@@ -34,10 +34,14 @@ I took the added step of opening the CSV in Excel and saving it as XLSX. Just a 
 ------------------------------
 The final stop for the Excel data is a table named 'projects' but first it will be put in a staging table called 'xlsx_projects'. This is a convention based on personal preference that I follow. 
 
-Since there are countless ways an SQL Server database, its tables, and user access could be configured, I won't get into a detailed step-by-step process of how to use this wizard to import data into SQL Server. I am using SQL Server Developer Edition for this and pretty much have unlimited or near-unlimited rights over the tables I am populating. 
+Since there are countless ways an SQL Server database, its tables, and user access could be configured, I won't get into a detailed step-by-step process of how to use this wizard to import data into SQL Server. 
 
-However you have your database setup, the end result is to have a table called xlsx_projects that conceptually is a clone of legacy-project_table.xlsx. 
+My setup uses SQL Server Developer Edition for this and there are few, if any access rights limitations. 
 
-In my particular case, I do not have the staging table xlsx_projects setup ahead of time. If it exists at the time I start the wizard I drop it before going on. I have had enough hassles with existing tables mucking up this wizard import process that I found it easier to just get rid of them before running the wizard. 
+However you have your database setup, the end result is to have a table called xlsx_projects that is structurally a clone of legacy-project_table.xlsx. 
 
-I don't do much configuration within the wizard other than to make sure all columns in the destination table (in this case xlsx_projects) are nullable and that the destination table name follows my naming conventions. For a lot of stuff I work with, that's all I really need. 
+The staging table xlsx_projects setup was not setup ahead of time. If it exists at the time I start the wizard I drop it before going on. 
+
+I have had enough hassles with existing destination tables mucking up this wizard import process that it seemed easier to just get rid of them before running the wizard. 
+
+I also don't do much configuration within the wizard other than to make sure all columns in the destination table (in this case xlsx_projects) are nullable and that the destination table name follows my naming conventions. This prevents data errors between legacy-project-table.xlsx and xlsx_projects from adding NULL values. If the data needs additional cleaning, it's better to do it in xlsx_projects than the Excel file. 
