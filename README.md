@@ -22,6 +22,6 @@ Project start dates are in yyyymmdd format and can be random dates in 2024 to 20
 
 If a project is no longer active, a project end reason must be provided: 'executive decision', 'funding', 'obsolete', 'scheduled end' are the only valid reasons.
 
-Projects are structured in a hierarchy with parents and children. The child of a project can never begin before its parent begins. The ancestry of a project could span multiple generations. A parent project could have grandchildren and great-grandchildren. 
+Projects are structured in a hierarchy with parents and children. The child of a project can never begin before its parent begins. The ancestry of a project could span multiple generations. A parent project could have grandchildren and great-grandchildren. Children should be based on subject matter relevant to the parent project.  
 
 Prompt ends here. I'll be sure to save my prompts in the future LOL. 
