@@ -17,7 +17,7 @@ indicating it is the first delivery project for January 2024, then the next deli
 
 The project description should be a subject approriate to the department. You would not have 'DOT compliance training' for an accountant. 
 
-Project start dates are in yyyymmdd format and can be random dates in 2024 to 2025. The project end date must be after the project start date and is in the same yyyymmdd format. If a project has an end date, its project active flag is o, otherwise it is 1. 
+Project start dates are in yyyymmdd format and can be random dates in 2024 to 2025. The project end date must be after the project start date and is in the same yyyymmdd format. If a project has an end date, its project active flag is 0, otherwise it is 1. 
 
 If a project is no longer active, a project end reason must be provided: 'executive decision', 'funding', 'obsolete', 'scheduled end' are the only valid reasons.
 
