@@ -15,7 +15,7 @@ The prompt:
 Create a CSV called legacy-project-table.csv (IIRC, Claude won't save to XLSX) of random project IDs based on a four-letter abbreviation for the departments: 'DLVY' for delivery; 'SHIP' for shipping; 'RCVG' for receiving; 'ACCT' for accounting; 'HRPR' for HR/Payroll; 'SALE' for Sales; and 'TECH' for IT.
 
 The next six characters should be a date in yyyymm format, followed by a dash, then followed by a three-digit sequence with leading zeros. The sequence should impose uniqueness on the numbering. If there was already a DLVY202401-001 
-indicating it is the first delivery project for January 2024, then the next delivery project would be DLVY2024001-002. 
+indicating it is the first delivery project for January 2024, then the next delivery project would be DLVY202401-002. 
 
 The project description should be a subject appropriate to the department. You would not have 'DOT compliance training' for an accountant for example. 
 
