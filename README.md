@@ -45,3 +45,17 @@ The staging table xlsx_projects setup was not setup ahead of time. If it exists 
 I have had enough hassles with existing destination tables mucking up this wizard import process that it seemed easier to just get rid of them before running the wizard. 
 
 I also don't do much configuration within the wizard other than to make sure all columns in the destination table (in this case xlsx_projects) are nullable and that the destination table name follows my naming conventions. This prevents data errors between legacy-project-table.xlsx and xlsx_projects from adding NULL values. If the data needs additional cleaning, it's better to do it in xlsx_projects than the Excel file. 
+
+
+(3) Create the projects table using Step-01-CREATE-TABLE-projects.sql
+-----------------------------
+This creates the projects table where the staged data will eventually go. There is a CREATE TABLE statement without constraints and one with them that is commented out. 
+
+
+(4) Run Step-02-XLSX-Wizard-Import-Conversion-and-Insert.sql
+----------------------
+There are some data issues that this script addresses. First, the PROJECT_START_DATE and PROJECT_END_DATE in xlsx_projects are in yyyymm format but treated as floats because the wizard in (2) converts data that appears to be numeric to float by default. As stated earlier, my preference is to do minimal conversion settings changes before completing the import and resolving the issue when the data gets moved from the staging table to the regular table. 
+
+The project structure needs a little tweak too. Before this tweak, there are several top-level projects with no parent. I refer to this as an 'oligarchy' in the code's comments. It's better to have a sole monarchy for recursion IMHO, so this code adds a lone top level project that serves as an anchor project for the recursive CTE to be setup.
+
+Then all the so-called oligarchs have their parent project set to the anchor project. 
