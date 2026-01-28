@@ -60,11 +60,10 @@ The project structure needs a little tweak too. Before this tweak, there are sev
 
 Then all the so-called oligarchs have their parent project set to the anchor project. 
 
-Addenda
-----------------------
-1. recursive_cte_copy_RESULTS.xlsx was added to the repo. This is simply the results from populating recursive_cte_copy stored in the form of an XLSX file.
-
-
 (5) Run RecursiveCTE.sql
 ---------------------
 As the name of the file suggests, this code creates a recursive common table expression (CTE) containing the project hierarchy/lineage. This CTE data is then permanently saved to a table called recursive_cte_copy
+
+Addenda
+----------------------
+1. recursive_cte_copy_RESULTS.xlsx was added to the repo. This is simply the results from populating recursive_cte_copy stored in the form of an XLSX file.
